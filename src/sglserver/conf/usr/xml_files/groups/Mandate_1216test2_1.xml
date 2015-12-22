@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Mandate>
+<KeyAgreement xmlns:ID="1943528656">
+<Group xmlns:Count="1"/>
+<Peer xmlns:ID="1" xmlns:alt="1">
+<Round round="1">
+<Option>AntiDishonestInsider</Option>
+<Behavior>Exchange</Behavior>
+<GroupID/>
+<GroupName>1216test2</GroupName>
+<SendTo>
+<Peer>
+<ID>2</ID>
+<alt>1</alt>
+<IP>133.66.164.61</IP>
+<RelayIP>133.66.164.60</RelayIP>
+</Peer>
+</SendTo>
+<ReceiveFrom>
+<ID>2</ID>
+<alt>1</alt>
+<IP>133.66.164.61</IP>
+<RelayIP>133.66.164.60</RelayIP>
+</ReceiveFrom>
+</Round>
+<Round round="2">
+<Option>AntiDishonestInsider</Option>
+<Behavior>Exchange</Behavior>
+<GroupID/>
+<GroupName>1216test2</GroupName>
+<SendTo>
+<Peer>
+<ID>0</ID>
+<alt>1</alt>
+<IP>133.66.164.62</IP>
+<RelayIP>133.66.164.60</RelayIP>
+</Peer>
+</SendTo>
+<ReceiveFrom>
+<ID>0</ID>
+<alt>1</alt>
+<IP>133.66.164.62</IP>
+<RelayIP>133.66.164.60</RelayIP>
+</ReceiveFrom>
+</Round>
+</Peer>
+</KeyAgreement>
+</Mandate>
+

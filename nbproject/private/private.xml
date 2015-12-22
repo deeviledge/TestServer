@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+        <file>
+            <url>src/sglserver/conf/usr/xml_files/GroupInformation.xml</url>
+            <bookmark id="1">
+                <name/>
+                <line>0</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/adimistrator/Desktop/SGLdebugbyokumura/SglServer/src/sglserver/conf/usr/xml_files/groups/sekkei_1201case02.xml</file>
+            <file>file:/C:/Users/adimistrator/Desktop/SGLdebugbyokumura/SglServer/src/sglserver/conf/usr/xml_files/groups/sekkei_1216test1.xml</file>
+            <file>file:/C:/Users/adimistrator/Desktop/SGLdebugbyokumura/SglServer/src/sglserver/servermain/MakeGroupProcess.java</file>
+            <file>file:/C:/Users/adimistrator/Desktop/SGLdebugbyokumura/SglServer/src/sglserver/conf/usr/xml_files/GroupInformation.xml</file>
+            <file>file:/C:/Users/adimistrator/Desktop/SGLdebugbyokumura/SglServer/src/sglserver/groupinformation/FirstGroupInformaiton.java</file>
+            <file>file:/C:/Users/adimistrator/Desktop/SGLdebugbyokumura/SglServer/src/sglserver/conf/usr/xml_files/groups/sekkei_1216test2.xml</file>
+            <file>file:/C:/Users/adimistrator/Desktop/SGLdebugbyokumura/SglServer/src/sglserver/groupinformation/UserSorting.java</file>
+            <file>file:/C:/Users/adimistrator/Desktop/SGLdebugbyokumura/SglServer/src/sglserver/dynamicpeerinformation/DynamicPeerInformation.java</file>
+            <file>file:/C:/Users/adimistrator/Desktop/SGLdebugbyokumura/SglServer/src/sglserver/conf/usr/xml_files/groups/sekkei_test_1201.xml</file>
+            <file>file:/C:/Users/adimistrator/Desktop/SGLdebugbyokumura/SglServer/src/sglserver/conf/usr/xml_files/groups/Mandate_1201case4.xml</file>
+            <file>file:/C:/Users/adimistrator/Desktop/SGLdebugbyokumura/SglServer/src/sglserver/conf/usr/xml_files/groups/sekkei_test_1201_1.xml</file>
+            <file>file:/C:/Users/adimistrator/Desktop/SGLdebugbyokumura/SglServer/src/sglserver/conf/usr/xml_files/groups/sekkei_1201case04.xml</file>
+            <file>file:/C:/Users/adimistrator/Desktop/SGLdebugbyokumura/SglServer/src/sglserver/conf/usr/xml_files/groups/sekkei_1201case05.xml</file>
+            <file>file:/C:/Users/adimistrator/Desktop/SGLdebugbyokumura/SglServer/src/sglserver/conf/usr/xml_files/DynamicPeerInformation.xml</file>
+            <file>file:/C:/Users/adimistrator/Desktop/SGLdebugbyokumura/SglServer/src/sglserver/conf/usr/xml_files/groups/sekkei_test_1201_2.xml</file>
+            <file>file:/C:/Users/adimistrator/Desktop/SGLdebugbyokumura/SglServer/src/sglserver/conf/usr/xml_files/groups/sekkei_1201case03.xml</file>
+        </group>
+    </open-files>
+</project-private>
