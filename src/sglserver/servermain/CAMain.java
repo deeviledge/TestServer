@@ -32,7 +32,7 @@ public class CAMain {
                     @SuppressWarnings("resource")
                     ServerSocket ssoc = new ServerSocket(12345,100);    //サーバソケットを生成する(12345番ポート)
                     System.out.print("SGL CA start...");
-                    System.out.println("Waiting for connection from sglclient");
+                    System.out.println("Waiting for connection from sglclient...");
                     while(true) {
                         try { 		  
                             soc = ssoc.accept();   // SGLクライアントからの接続を待つ
