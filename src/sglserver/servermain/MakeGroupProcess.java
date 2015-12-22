@@ -48,7 +48,7 @@ public class MakeGroupProcess {
                 us.sort();                     //取得したIDの順にリストを並べ替え
                 ArrayList<?> sorted_list =us.get_sorted();   //並べ替えたリストを取得する
                 System.out.println("並び替えが完了しました"); 
-                System.out.println("DynamicPeerInformation.xmlに記載された順は以下の並びにです");
+                System.out.println("DynamicPeerInformation.xmlに記載された順は以下の並びです");
                 System.out.println(sorted_list);
 
                 //グループ設計書の作成
