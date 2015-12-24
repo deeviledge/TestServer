@@ -15,7 +15,11 @@ import sglserver.groupinformation.UserSorting;
 import sglserver.keyexchange.KEControllServer;
 import sglserver.keyexchange.KEServer;
 import sglserver.keyexchange.RoundServer;
-
+/**
+ * 
+ * 鍵交換処理の基本クラス（上位階層クラス）
+ * @author nishimura,okumura
+ */
 public class MakeGroupProcess {
 	/************************定数宣言***********************/
 	public static final int INPUT_STREAM_BUFFER = 512;	//入力ストリーム格納バッファサイズ
