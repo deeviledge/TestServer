@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="214.0" prefWidth="419.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="custombrowser.SetIPController">
+   <children>
+      <Label layoutX="54.0" layoutY="24.0" prefHeight="16.0" prefWidth="68.0" text="現在のIP：" />
+      <Label fx:id="setLabel" layoutX="120.0" layoutY="24.0" prefHeight="16.0" prefWidth="135.0" />
+      <Label layoutX="45.0" layoutY="66.0" text="設定するIP：" />
+      <TextField fx:id="setTextField" layoutX="122.0" layoutY="61.0" prefHeight="26.0" prefWidth="135.0" />
+      <Button fx:id="setButton" defaultButton="true" layoutX="312.0" layoutY="130.0" mnemonicParsing="false" onAction="#handleSetIPButtonAction" prefHeight="26.0" prefWidth="77.0" text="設定" />
+      <Label fx:id="messageLabel" layoutX="19.0" layoutY="135.0" prefHeight="43.0" prefWidth="282.0" />
+      <Button fx:id="closeButton" layoutX="312.0" layoutY="165.0" mnemonicParsing="false" onAction="#handleCloseButtonAction" prefHeight="26.0" prefWidth="77.0" text="閉じる" />
+   </children>
+</AnchorPane>

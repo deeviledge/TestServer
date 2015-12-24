@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><PeerBasicInformation>
-<BasicInformation xmlns:ID="0000">
-    <PeerName>cherryPi</PeerName>
-    <MailAddress>chrryPi@gmail.com</MailAddress>
-    <Certification>src/sglserver/conf/usr/ca/cherryPi.cer</Certification>
-</BasicInformation>
-<BasicInformation xmlns:ID="0001"><PeerName>cookiecream</PeerName><MailAddress>cookiecream@gmail.com</MailAddress><Certification>src/sglserver/conf/usr/ca/cookiecream.cer</Certification></BasicInformation><BasicInformation xmlns:ID="0002"><PeerName>poundcake</PeerName><MailAddress>poundcake@gmail.com</MailAddress><Certification>src/sglserver/conf/usr/ca/poundcake.cer</Certification></BasicInformation></PeerBasicInformation>

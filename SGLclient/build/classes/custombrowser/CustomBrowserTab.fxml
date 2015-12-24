@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+
+<AnchorPane id="AnchorPane" minWidth="0.0" prefHeight="682.0" prefWidth="-1.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <Button fx:id="backButton" disable="false" layoutX="-1.0" layoutY="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleBackButtonAction" opacity="0.5" prefHeight="20.0" prefWidth="30.0" rotate="0.0" text="&lt;" textFill="#4100cc" visible="true" wrapText="false">
+      <effect>
+        <DropShadow offsetX="5.0" offsetY="5.0">
+          <color>
+            <Color blue="0.392" green="0.392" red="0.392" fx:id="x1" />
+          </color>
+        </DropShadow>
+      </effect>
+      <font>
+        <Font name="System Bold" size="12.0" fx:id="x2" />
+      </font>
+    </Button>
+    <Button fx:id="forwardButton" font="$x2" layoutX="34.0" layoutY="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleForwardButtonAction" opacity="0.5" prefHeight="20.0" prefWidth="30.0" rotate="0.0" text="&gt;" textFill="#560099" wrapText="false">
+      <effect>
+        <DropShadow color="$x1" offsetX="5.0" offsetY="5.0" />
+      </effect>
+    </Button>
+    <TextField fx:id="urlField" layoutX="64.0" layoutY="4.0" maxHeight="-1.0" maxWidth="1.7976931348623157E308" minHeight="-1.0" minWidth="10.0" onAction="#handleLoadButtonAction" prefHeight="26.0" prefWidth="892.0" AnchorPane.leftAnchor="64.0" AnchorPane.rightAnchor="212.0">
+      <effect>
+        <Glow level="0.4337579617834395" />
+      </effect>
+    </TextField>
+    <Button id="button" fx:id="loadButton" layoutX="1038.0" layoutY="4.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleLoadButtonAction" prefHeight="29.0" prefWidth="64.0" text="Load" AnchorPane.rightAnchor="66.0">
+      <effect>
+        <SepiaTone>
+          <input>
+            <InnerShadow />
+          </input>
+        </SepiaTone>
+      </effect>
+      <font>
+        <Font size="14.0" />
+      </font>
+    </Button>
+    <Button id="addBookmark" fx:id="addBookmarkButton" layoutX="941.0" layoutY="4.0" mnemonicParsing="false" onAction="#handleAddBookmarkButtonAction" prefHeight="29.0" prefWidth="97.0" text="+Bookmark" AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="4.0" />
+    <AnchorPane id="AnchorPane" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="34.0">
+      <children>
+        <StackPane id="StackPane" fx:id="stackPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="638.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+          <children>
+            <AnchorPane fx:id="bookmarkAnchorPane" minHeight="19.0" prefHeight="637.9999000000025">
+              <children>
+                <TitledPane fx:id="bookmarkTitledPane" animated="true" collapsible="true" expanded="false" minHeight="19.0" minWidth="0.0" prefHeight="226.0" prefWidth="1101.0" text="ブックマーク" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <content>
+                    <AnchorPane id="Content" cache="false" disable="false" focusTraversable="false" minHeight="0.0" minWidth="0.0" prefHeight="189.0" prefWidth="1097.0" snapToPixel="true" visible="false">
+                      <children>
+                        <TableView fx:id="bookmarkTableView" cache="false" focusTraversable="true" minWidth="0.0" prefHeight="206.0" prefWidth="1097.0" tableMenuButtonVisible="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="siteColumn" maxWidth="5000.0" minWidth="10.0" prefWidth="533.0" text="サイト名" />
+                            <TableColumn fx:id="urlColumn" maxWidth="5000.0" minWidth="10.0" prefWidth="564.0" text="URL" />
+                          </columns>
+                        </TableView>
+                      </children>
+                    </AnchorPane>
+                  </content>
+                </TitledPane>
+              </children>
+            </AnchorPane>
+            <AnchorPane fx:id="webviewAnchorPane" focusTraversable="false" prefHeight="637.9999000000025">
+              <children>
+                <WebView fx:id="webView" prefHeight="644.0" prefWidth="1101.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <effect>
+                    <InnerShadow />
+                  </effect>
+                </WebView>
+              </children>
+              <StackPane.margin>
+                <Insets top="20.0" />
+              </StackPane.margin>
+            </AnchorPane>
+          </children>
+        </StackPane>
+      </children>
+    </AnchorPane>
+      <MenuBar layoutX="1090.0" layoutY="4.0" prefHeight="29.0" prefWidth="64.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <menus>
+            <Menu mnemonicParsing="false" text="SGL">
+               <items>
+                  <MenuItem fx:id="LoginItem" mnemonicParsing="false" onAction="#handleLoginButtonAction" text="ログイン" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleServerIPButtonAction" text="サーバーIPを設定" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleGroupEditButtonAction" text="グループ管理" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleLogoutButtonAction" text="ログアウト" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+  </children>
+</AnchorPane>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+
+<AnchorPane id="AnchorPane" minWidth="0.0" prefHeight="713.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="custombrowser.CustomBrowserController">
+    <!-- TODO Add Nodes -->
+  <children>
+    <TabPane fx:id="tabPane" cache="false" disable="false" focusTraversable="true" layoutX="-6.0" maxWidth="1.7976931348623157E308" minWidth="0.0" mouseTransparent="false" pickOnBounds="false" prefHeight="693.0" rotateGraphic="true" styleClass="tab-content-area" tabClosingPolicy="ALL_TABS" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="-6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="0.0">
+      <stylesheets>
+        <URL value="@../stylesheet/tab-content-area.css" />
+      </stylesheets>
+      <tabs>
+        <Tab fx:id="defaultTab" disable="false" text="新しいタブ">
+          <content>
+            <AnchorPane id="AnchorPane" minWidth="0.0" prefHeight="700.0" prefWidth="-1.0">
+              <children>
+                <Button fx:id="backButton" disable="false" layoutX="3.0" layoutY="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleBackButtonAction" opacity="0.5" prefHeight="20.0" prefWidth="30.0" rotate="0.0" text="&lt;" textFill="#4100cc" visible="true" wrapText="false">
+                  <effect>
+                    <DropShadow offsetX="5.0" offsetY="5.0">
+                      <color>
+                        <Color blue="0.392" green="0.392" red="0.392" fx:id="x2" />
+                      </color>
+                    </DropShadow>
+                  </effect>
+                  <font>
+                    <Font name="System Bold" size="12.0" fx:id="x1" />
+                  </font>
+                </Button>
+                <Button fx:id="forwardButton" font="$x1" layoutX="38.0" layoutY="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleForwardButtonAction" opacity="0.5" prefHeight="20.0" prefWidth="30.0" rotate="0.0" text="&gt;" textFill="#560099" wrapText="false">
+                  <effect>
+                    <DropShadow color="$x2" offsetX="5.0" offsetY="5.0" />
+                  </effect>
+                </Button>
+                  <TextField fx:id="urlField" layoutY="4.0" maxHeight="-1.0" maxWidth="1.7976931348623157E308" minHeight="-1.0" minWidth="10.0" onAction="#handleLoadButtonAction" prefHeight="26.0" prefWidth="873.0" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="215.0">
+                  <effect>
+                    <Glow level="0.4337579617834395" />
+                  </effect>
+                  </TextField>
+                <Button id="button" fx:id="loadButton" layoutX="1027.0" layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleLoadButtonAction" prefHeight="32.0" prefWidth="65.0" text="Load" AnchorPane.rightAnchor="64.0" AnchorPane.topAnchor="-2.0">
+                  <effect>
+                    <SepiaTone>
+                      <input>
+                        <InnerShadow />
+                      </input>
+                    </SepiaTone>
+                  </effect>
+                  <font>
+                    <Font size="14.0" />
+                  </font>
+                </Button>
+                        <MenuBar layoutX="1092.0" prefHeight="34.0" prefWidth="64.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <menus>
+                            <Menu mnemonicParsing="false" text="SGL">
+                              <items>
+                                <MenuItem fx:id="LoginItem" mnemonicParsing="false" onAction="#handleLoginButtonAction" />
+                                    <MenuItem mnemonicParsing="false" onAction="#handleServerIPButtonAction" text="サーバIPを設定" />
+                                    <MenuItem mnemonicParsing="false" onAction="#handleGroupEditButtonAction" text="グループ管理" />
+                                    <MenuItem mnemonicParsing="false" onAction="#handleLogoutButtonAction" text="ログアウト" />
+                              </items>
+                            </Menu>
+                          </menus>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </MenuBar>
+                <AnchorPane id="AnchorPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="24.0">
+                  <children>
+                    <StackPane id="StackPane" fx:id="stackPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="0.0" prefHeight="638.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                      <children>
+                        <AnchorPane id="bookmarkAnchorPane" fx:id="webviewAnchorPane" minHeight="19.0" minWidth="0.0" prefHeight="637.9999000000025">
+                          <children>
+                            <TitledPane fx:id="bookmarkTitledPane" animated="true" collapsible="true" expanded="false" layoutY="3.0" minHeight="19.0" minWidth="0.0" prefHeight="223.0" prefWidth="1156.0" text="ブックマーク" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="3.0">
+                              <content>
+                                <AnchorPane id="Content" cache="false" disable="false" focusTraversable="false" minHeight="0.0" minWidth="0.0" prefHeight="189.0" prefWidth="1097.0" snapToPixel="true" visible="false">
+                                  <children>
+                                    <TableView fx:id="bookmarkTableView" cache="false" focusTraversable="true" minWidth="-Infinity" prefHeight="206.0" prefWidth="-1.0" tableMenuButtonVisible="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn fx:id="siteColumn" maxWidth="5000.0" minWidth="0.0" prefWidth="533.0" resizable="false" text="サイト名" />
+                                        <TableColumn fx:id="urlColumn" maxWidth="5000.0" minWidth="0.0" prefWidth="564.0" resizable="false" text="URL" />
+                                      </columns>
+                                    </TableView>
+                                  </children>
+                                </AnchorPane>
+                              </content>
+                            </TitledPane>
+                          </children>
+                          <StackPane.margin>
+                            <Insets />
+                          </StackPane.margin>
+                        </AnchorPane>
+                        <AnchorPane id="webviewAnchorPane" fx:id="bookmarkAnchorPane" focusTraversable="false" prefHeight="637.9999000000025">
+                          <children>
+                            <WebView fx:id="webView" layoutX="6.0" prefHeight="644.0" prefWidth="1101.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="0.0">
+                              <effect>
+                                <InnerShadow />
+                              </effect>
+                            </WebView>
+                          </children>
+                          <StackPane.margin>
+                            <Insets top="20.0" />
+                          </StackPane.margin>
+                        </AnchorPane>
+                      </children>
+                    </StackPane>
+                  </children>
+                </AnchorPane>
+                <Button id="addBookmark" fx:id="addBookmarkButton" layoutX="928.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleAddBookmarkButtonAction" prefHeight="26.0" prefWidth="99.0" text="+Bookmark" AnchorPane.rightAnchor="129.0" AnchorPane.topAnchor="1.0" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab fx:id="newTab" closable="false" disable="false" text="">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          </content>
+          <graphic>
+            <Button fx:id="newTabButton" mnemonicParsing="false" onAction="#handelNewTabButtonAction" text="+" />
+          </graphic>
+        </Tab>
+        <Tab fx:id="encodeTab" closable="false" disable="true" text="暗号化プレビュー">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="backgroundcolor">
+              <children>
+                <TitledPane fx:id="encodeTitledPane" animated="true" collapsible="true" disable="false" expanded="true" prefHeight="682.0" prefWidth="1107.0" text="Title of encoded file" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <content>
+                    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" opacity="1.0" prefHeight="180.0" prefWidth="200.0" style="" styleClass="null">
+                      <children>
+                        <TextArea fx:id="encodedText" prefHeight="616.0" prefWidth="1103.0" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="19.0" />
+                        <Button fx:id="saveButton" layoutX="0.0" layoutY="0.0" mnemonicParsing="false" onAction="#handleSaveButtonAction" text="Save" />
+                      </children>
+                    </AnchorPane>
+                  </content>
+                  <stylesheets>
+                    <URL value="@../stylesheet/titledpane.css" />
+                  </stylesheets>
+                </TitledPane>
+              </children>
+              <stylesheets>
+                <URL value="@../stylesheet/backgroundcolor.css" />
+              </stylesheets>
+            </AnchorPane>
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+    <ComboBox fx:id="encode_decodeGroupComboBox" editable="false" layoutX="966.0" layoutY="687.0" onAction="#handleGroupListboxAction" prefHeight="26.0" prefWidth="90.0" promptText="Group" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="79.0">
+      <effect>
+        <InnerShadow />
+      </effect>
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="アイテム1" />
+          <String fx:value="アイテム2" />
+          <String fx:value="アイテム3" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <Button fx:id="encodeButton" layoutX="1088.0" layoutY="686.0" mnemonicParsing="false" onAction="#handleEncodeButtonAction" prefHeight="26.0" prefWidth="77.0" text="Encode" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="4.0" />
+    <Button fx:id="decodeButton" layoutX="929.0" layoutY="687.0" mnemonicParsing="false" onAction="#handleDecodeButtonAction" prefHeight="26.0" prefWidth="77.0" text="Decode" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="168.0" />
+    <ComboBox id="HistoryComboBox" fx:id="historyComboBox" maxWidth="1.7976931348623157E308" minHeight="13.0" minWidth="-Infinity" onAction="#selectHistoryComboBoxAction" prefHeight="21.0" prefWidth="913.0" promptText="HISTORY" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="243.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="アイテム1" />
+          <String fx:value="アイテム2" />
+          <String fx:value="アイテム3" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+  </children>
+</AnchorPane>

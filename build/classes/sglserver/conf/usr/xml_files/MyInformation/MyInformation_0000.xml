@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<MyInformation>
-    <User>
-        <UserID>0000</UserID>
-        <UserName>cherryPi</UserName>
-        <MailAddress>chrryPi@gmail.com</MailAddress>
-        <Certification>src/sglclient/conf/usr/ca/cherryPi.cer</Certification>
-    </User>
-</MyInformation>
