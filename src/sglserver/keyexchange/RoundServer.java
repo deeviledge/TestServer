@@ -28,7 +28,9 @@ public class RoundServer{
 		
 		// ログインユーザ情報読み込み
 		DynamicPeerInformation dpinfo = new DynamicPeerInformation();
-			
+		
+                ThreadController tc=new ThreadController(names[0],names[1]);
+                
 		for(int i=0;i<names.length;i++){
 			// グループメンバのIPアドレス取得
 			String ip = dpinfo.getIP(names[i]);
@@ -40,11 +42,11 @@ public class RoundServer{
 			//次のラウンド数を伝える
 			if(command.equals("roundstart"))out.println(String.valueOf(round));
                         //コントローラークラス
-                        /*
-                        ThreadController tc=new ThreadController();
+                }
                         
-                                */
-		}
+                        
+
+                
 	}
 }
 
