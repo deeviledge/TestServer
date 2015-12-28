@@ -40,6 +40,10 @@ public class RoundServer{
 			//次のラウンド数を伝える
 			if(command.equals("roundstart"))out.println(String.valueOf(round));
                         //コントローラークラス
+                        /*
+                        ThreadController tc=new ThreadController();
+                        
+                                */
 		}
 	}
 }
