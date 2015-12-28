@@ -26,7 +26,7 @@ public class KEControllServer {
 	public boolean RoundControll(ServerSocket ssoc,String[] users) throws Exception{
 		boolean member_flg=false;
 		int cnt=0;
-        while(true) {
+            while(true) {
         	try { 		  
         		soc = ssoc.accept();   // SGLクライアントからの接続を待つ
         		// 入出力ストリームを取得する
@@ -51,10 +51,10 @@ public class KEControllServer {
         	member_flg=false;
         	cnt++;
         	if(cnt==users.length)break;
-        }
-        soc.close();	
-		round_ois.close();
-        return true;
+            }
+            soc.close();	
+            round_ois.close();
+            return true;
 	}
 	
 }
